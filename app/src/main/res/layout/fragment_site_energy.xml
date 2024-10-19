@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/body_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/scale_10dp"
+            android:paddingLeft="@dimen/scale_10dp"
+            android:paddingRight="@dimen/scale_10dp">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_filter"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_toLeftOf="@+id/img_filter_header"
+
+                android:text="@string/dcb" />
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/img_filter_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:padding="@dimen/_5sdp"
+
+                android:layout_alignParentRight="true"
+                android:text="FILTER" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/energy_site_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_filter"
+                android:paddingTop="@dimen/scale_4dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/scale_10dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>
+

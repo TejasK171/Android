@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">@color/toolbar_bg</color>
+    <color name="toolbar_bg">#214796</color>
+    <color name="jioinfra_gray">#7d7d7d</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="color2">#18C7FB</color>
+    <color name="color3">#678CFD</color>
+    <color name="color4">#FF9E00</color>
+    <color name="color5">#09CBCB</color>
+    <color name="google_red">#304FFE</color>
+
+    <color name="button_bg_color">#214796</color><!--#962b29-->
+    <color name="light_blue_A400">#3DB5EA</color>
+    <color name="light_blue_A700">#008ECC</color>
+    <color name="blue_faint">#95DDE4</color><!--#962b29-->
+    <color name="dark_blue">#1C1C1C</color><!--#962b29-->
+    <color name="login_edt_grey">#707070</color><!--#962b29-->
+    <color name="light_blue">#90CAF9</color><!--#962b29-->
+    <color name="mustard_color">#EFCC15</color><!--#962b29-->
+    <color name="transparent">#00000000</color><!--#962b29-->
+    <color name="body_bg">#F6F6F6</color>
+    <color name="blue_text">#0078C1</color>
+    <color name="text_color_grey">#7B7B7B</color>
+    <color name="light_grey">#E0E0E0</color>
+    <color name="acknowladge_back">#2ECC71</color>
+    <color name="dead_dells_orange">#F96A4C</color>
+    <color name="hosp_dells_yellow">#DEBB00</color>
+    <color name="icu_dells_yellow">#FF9E00</color>
+    <color name="bg_color_grey">#F4F4F4</color>
+    <color name="txt_grey_color">#525252</color>
+    <color name="text_red_color">#F96A4C</color>
+    <color name="text_view_details_color">#0066C0</color>
+    <color name="dcb_grey_txt_color">#959595</color>
+    <color name="green_color_code">#00ff00</color>
+    <color name="red_color_code">#FF0000</color>
+    <color name="blue_faint_color">#537CDB</color>
+    <color name="dark_blue_color">#2F498B</color>
+    <color name="red_error_color">#cc0000</color>
+    <color name="roster_green_color_code">#32CD32</color>
+    <color name="light_green">#B4FAC4</color>
+
+</resources>

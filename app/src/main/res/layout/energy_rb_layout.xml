@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RadioGroup
+        android:id="@+id/radio_groupAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/viewId"
+
+        >
+
+        <RadioButton
+            android:id="@+id/rb_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:textSize="@dimen/_10sdp" />
+
+        <RadioButton
+            android:id="@+id/rb_p1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P1"
+            android:textSize="@dimen/_10sdp" />
+
+        <RadioButton
+            android:id="@+id/rb_rp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RP1"
+            android:textSize="@dimen/_10sdp" />
+
+
+        <RadioButton
+            android:id="@+id/rb_ipColo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IP Colo"
+            android:textSize="@dimen/_10sdp" />
+    </RadioGroup>
+
+</LinearLayout>

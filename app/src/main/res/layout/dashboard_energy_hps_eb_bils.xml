@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+           android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:orientation="vertical"
+                android:background="@drawable/white_rounded_corner_bg"
+
+                android:layout_weight="1"
+                >
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="High CPH"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+
+                    android:textColor="@color/jioinfra_gray">
+
+                </com.jio.jioinfra.custom.TextViewMedium>
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/black"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:weightSum="2"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+
+                        <com.jio.jioinfra.custom.TextViewLight
+                            android:id="@+id/eb_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:text=""
+                            android:textColor="@color/blue_text"
+                            android:textSize="@dimen/text_size_medium"></com.jio.jioinfra.custom.TextViewLight>
+
+                        <com.jio.jioinfra.custom.TextViewMedium
+                            android:id="@+id/eb_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/text_size_so_small"
+
+                            android:gravity="center"
+                            android:text="">
+
+                        </com.jio.jioinfra.custom.TextViewMedium>
+
+                    </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            >
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/dg_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text=""
+                                android:padding="@dimen/_5sdp"
+                                android:textSize="@dimen/text_size_large"
+                                android:textColor="@color/blue_text"
+
+                                >
+                            </com.jio.jioinfra.custom.TextViewLight>
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/dg_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:textSize="@dimen/text_size_so_small"
+
+                                android:text=""
+                                >
+
+                            </com.jio.jioinfra.custom.TextViewMedium>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:background="@drawable/white_rounded_corner_bg"
+
+                android:layout_weight="1"
+                >
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EB Bills"
+                    android:textColor="@color/jioinfra_gray"
+                    android:gravity="center"
+                    ></com.jio.jioinfra.custom.TextViewMedium>
+
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/grey_border_bg"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:weightSum="2"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+
+                        <com.jio.jioinfra.custom.TextViewLight
+                            android:id="@+id/collected_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="53"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/text_size_so_small"
+                            android:textColor="@color/blue_text"
+                            >
+                        </com.jio.jioinfra.custom.TextViewLight>
+
+                        <com.jio.jioinfra.custom.TextViewMedium
+                            android:id="@+id/cillected_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="left"
+                            android:text="collected"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:textSize="@dimen/_10sdp">
+
+                        </com.jio.jioinfra.custom.TextViewMedium>
+
+                    </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            >
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/paid_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="53"
+                                android:padding="@dimen/_5sdp"
+                                android:textSize="@dimen/text_size_so_small"
+                                android:textColor="@color/blue_text"
+                                android:autoSizeTextType="uniform"
+                                android:autoSizeMinTextSize="12sp"
+                                android:autoSizeMaxTextSize="100sp"
+                                android:autoSizeStepGranularity="2sp"
+                                >
+                            </com.jio.jioinfra.custom.TextViewLight>
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/paid_txt"
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_5sdp"
+                                android:textSize="@dimen/text_size_so_small"
+
+                                android:text=""
+                                >
+
+                            </com.jio.jioinfra.custom.TextViewMedium>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+</layout>

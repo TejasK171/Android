@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView android:id="@+id/card_view"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="5dp"
+    card_view:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+
+ android:layout_margin="@dimen/_5sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="visible"
+
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+           android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:text="Error Message"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:text="aa"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/jioinfra_gray"
+        />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="visible"
+
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:text="RPOGST"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:text="aa"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/jioinfra_gray"
+        />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="visible"
+
+        android:background="@color/white"
+
+        android:textColor="@color/black"
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:text="RPOSRR"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:text="aa"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/jioinfra_gray"
+        />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="visible"
+
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:text="JIO.COM"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:text="aa"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/jioinfra_gray"
+        />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="visible"
+
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:text="MY JIO"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:text="aa"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/jioinfra_gray"
+        />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="visible"
+
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:text="TPA"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:text="aa"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/jioinfra_gray"
+        />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="visible"
+
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:text="JIO MONEY"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:text="aa"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/jioinfra_gray"
+        />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="visible"
+
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:text="JIO PHONE"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:text="aa"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/jioinfra_gray"
+        />
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="visible"
+
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header17"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:text="ENTERPRISE"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:text="aa"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/jioinfra_gray"
+        />
+    <LinearLayout
+        android:id="@+id/lnr_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="visible"
+
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header19"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:text="JIO POSLITE"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:text="aa"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/jioinfra_gray"
+        />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:visibility="visible"
+
+        android:background="@color/white"
+
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header21"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_10sdp"
+
+            android:textColor="@color/black"
+            android:text="LOAD MONEY"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:text="aa"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cnsrntL_dcb"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardUseCompatPadding="true"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/_10sdp"
+            android:layout_height="wrap_content">
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_dcb_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/scale_5dp"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                android:textColor="@color/blue_text"
+                android:textSize="@dimen/text_size_large"
+                />
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_dcb_value"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/scale_5dp"
+                android:paddingTop="@dimen/scale_10dp"
+                android:text=""
+                android:textSize="@dimen/small_text_size"
+                android:layout_below="@+id/txt_dcb_count" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

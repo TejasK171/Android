@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_moring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_productivity_status"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight=".3"
+            android:background="@drawable/green_rounded" />
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_resource"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.9"
+            android:gravity="left"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/txt_grey_color"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_citrix_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/acknowladge_back"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_ngo_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.1"
+            android:gravity="left"
+            android:padding="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/acknowladge_back"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_time_clocked"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text=""
+            android:textColor="@color/txt_grey_color"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:layout_gravity="center|right"
+            android:gravity="right"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="Details"
+            android:textColor="@color/txt_grey_color"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/ll_moring">
+
+        <View
+            android:id="@+id/view_id"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/view_id">
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_alart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Alerts Acknowledged"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_avg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Avg Alert Ack Time"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_delead"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="Delayed Ack Alerts"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/ll">
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_alert_ack_count"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text=""
+                android:textColor="@color/jioinfra_gray"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_alert_ack_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text=""
+                android:textColor="@color/jioinfra_gray"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_delayed_ack_alerts_count"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text=""
+                android:textColor="@color/red_color_code"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_date" />
+
+
+        </LinearLayout>
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_hide"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:text="Hide"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lll" />
+
+        <View
+            android:id="@+id/view_id1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hide" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

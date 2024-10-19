@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/scale_20dp"
+    android:background="@drawable/white_rounded_corner_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/iv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/scale_15dp"
+                android:layout_marginTop="@dimen/scale_15dp"
+                android:background="@drawable/wd_close"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/login_edt_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/jioinfra_gray"
+            android:gravity="center_vertical"
+            android:minHeight="80dp"
+            android:orientation="vertical"
+            android:padding="@dimen/scale_16dp">
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/tv_dialog_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center_horizontal|center_vertical"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/login_edt_grey"
+                android:textSize="@dimen/scale_14dp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_violet_rounded_background">
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/tv_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/padding_common_layout"
+                android:text="@string/button_ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

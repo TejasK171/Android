@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constId"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/white_rounded_corner_bg"
+    android:padding="@dimen/_8sdp"
+    android:layout_margin="@dimen/_8sdp"
+    android:layout_height="wrap_content">
+
+    <com.jio.jioinfra.custom.TextViewBold
+        android:id="@+id/outlier_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/_8sdp"
+        android:text="Site Id:MU-MUMB-JC01-0001"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/sub_title"
+        app:layout_constraintEnd_toStartOf="@+id/txt_time"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/sub_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:text="RFO: FB(Electrinic Board) bill not paid"
+        android:textColor="@color/text_red_color"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/outlier_title"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:visibility="visible"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:text=""
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:text="View Details"
+        android:visibility="gone"
+
+        android:padding="@dimen/_6sdp"
+        android:textColor="@color/text_view_details_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_title"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

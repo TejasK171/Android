@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/bank_account_scroll_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:id="@+id/headerId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imgeLgoItd"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    app:srcCompat="@drawable/app_icon"
+                    tools:ignore="MissingConstraints">
+
+                </ImageView>
+
+                <!--<View
+                    android:id="@+id/view_id"
+                    android:layout_width="5dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:background="@color/toolbar_bg"
+                    app:layout_constraintLeft_toRightOf="@+id/imgeLgoItd"
+                    tools:ignore="MissingConstraints">
+
+                </View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="SIO"
+                    android:textColor="@color/toolbar_bg"
+                    android:textSize="@dimen/_20sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/view_id"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:ignore="MissingConstraints">
+        -->
+
+                <!-- </TextView>-->
+
+
+            </LinearLayout>
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/headerIdtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Smart Integrated Operations"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_16sdp"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headerId"
+                tools:ignore="MissingConstraints">
+
+
+            </com.jio.jioinfra.custom.TextViewLight>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_Id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:hint="Username"
+                app:layout_constraintTop_toBottomOf="@+id/headerIdtext"
+                app:theme="@style/Widget.Design.TextInputLayout"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/et_user_Id"
+                    style="@style/Base.TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/jioinfra_gray"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:hint="Password"
+                app:layout_constraintTop_toBottomOf="@+id/user_Id"
+                app:theme="@style/Widget.Design.TextInputLayout"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/login_password"
+                    style="@style/Base.TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/jioinfra_gray"
+
+                    android:textStyle="bold" />/
+                android:drawableLeft="@drawable/ic_password"
+                android:drawablePadding="10dp"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/ck_remember_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginTop="@dimen/scale_10dp"
+                android:buttonTint="@color/toolbar_bg"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password" />
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_remember_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/scale_15dp"
+                android:layout_marginRight="@dimen/scale_10dp"
+                android:gravity="center"
+                android:text="Remember username"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ck_remember_me"
+                app:layout_constraintTop_toBottomOf="@+id/password" />
+
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_timer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/scale_10dp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:gravity="center"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintStart_toEndOf="@+id/txt_otp_expires_in"
+                app:layout_constraintTop_toBottomOf="@+id/txt_remember_me" />
+
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_otp_expires_in"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/scale_10dp"
+                android:paddingRight="@dimen/scale_5dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="@string/otp_expires_in"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintStart_toStartOf="@+id/txt_remember_me"
+                app:layout_constraintTop_toBottomOf="@+id/txt_remember_me" />
+
+            <LinearLayout
+                android:id="@+id/lnr_send_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginTop="@dimen/scale_20dp"
+                android:weightSum="3"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_otp_expires_in">
+
+                <com.jio.jioinfra.custom.TextViewLight
+                    android:id="@+id/enter_otp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/enter_otp"
+                    android:textSize="@dimen/text_size_small"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <EditText
+                    android:id="@+id/edt_otp_val"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:padding="@dimen/scale_2dp"
+                    android:background="@drawable/grey_border_bg"
+                    android:textSize="@dimen/text_size_small"
+                    android:hint="@string/otp"
+                    android:inputType="number"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.jio.jioinfra.custom.TextViewLight
+                    android:id="@+id/txt_resend_otp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/scale_4dp"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:text="@string/resend_otp"
+                    android:textColor="@color/blue_text"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_powered_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/scale_10dp"
+                android:paddingBottom="@dimen/scale_14dp"
+                android:text="Powered by NextGenOPS"
+                android:textAllCaps="false"
+                android:textColor="@color/text_color_grey"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/scale_17dp"
+                android:paddingBottom="@dimen/scale_14dp"
+                android:text=""
+                android:textAllCaps="false"
+                android:textColor="@color/text_color_grey"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/txt_powered_by"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/scale_5dp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:background="@color/toolbar_bg"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toTopOf="@+id/txt_version"
+                app:layout_constraintTop_toBottomOf="@+id/lnr_send_otp" />
+
+
+            <!--<androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/scale_30dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="Login"
+
+
+                android:textAllCaps="false"
+                android:background="@color/toolbar_bg"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_remember_me"
+                tools:ignore="MissingConstraints">
+
+            </androidx.appcompat.widget.AppCompatButton>-->
+
+
+            <!--<com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/btn_login"
+                app:layout_constraintBottom_toTopOf="@+id/txt_powered_by"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="16sp"
+                android:paddingBottom="@dimen/scale_14dp"
+                android:paddingLeft="@dimen/scale_90dp"
+                android:paddingRight="@dimen/scale_90dp"
+                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/scale_10dp"
+                android:textColor="@color/text_color_grey"/>-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,231 @@
+<resources>
+    <dimen name="scale_0dp">0dp</dimen>
+    <dimen name="scale_1dp">1dp</dimen>
+    <dimen name="scale_2dp">2dp</dimen>
+    <dimen name="scale_3dp">3dp</dimen>
+    <dimen name="scale_4dp">4dp</dimen>
+    <dimen name="scale_5dp">5dp</dimen>
+    <dimen name="scale_6dp">6dp</dimen>
+    <dimen name="scale_7dp">7dp</dimen>
+    <dimen name="scale_8dp">8dp</dimen>
+    <dimen name="scale_9dp">9dp</dimen>
+    <dimen name="scale_10dp">10dp</dimen>
+    <dimen name="scale_11dp">11dp</dimen>
+    <dimen name="scale_12dp">12dp</dimen>
+    <dimen name="scale_13dp">13dp</dimen>
+    <dimen name="scale_14dp">14dp</dimen>
+    <dimen name="scale_15dp">15dp</dimen>
+    <dimen name="scale_16dp">16dp</dimen>
+    <dimen name="scale_17dp">17dp</dimen>
+    <dimen name="scale_18dp">18dp</dimen>
+    <dimen name="scale_19dp">19dp</dimen>
+    <dimen name="scale_20dp">20dp</dimen>
+    <dimen name="scale_21dp">21dp</dimen>
+    <dimen name="scale_22dp">22dp</dimen>
+    <dimen name="scale_23dp">23dp</dimen>
+    <dimen name="scale_25dp">25dp</dimen>
+    <dimen name="scale_26dp">26dp</dimen>
+    <dimen name="scale_28dp">28dp</dimen>
+    <dimen name="scale_30dp">30dp</dimen>
+    <dimen name="scale_31dp">31dp</dimen>
+    <dimen name="scale_32dp">32dp</dimen>
+    // Calendar
+    <dimen name="title_bar_button_width">36dp</dimen>
+    <dimen name="title_bar_button_height">36dp</dimen>
+
+    <!-- day -->
+    <dimen name="day_circle_width">24dp</dimen>
+    <dimen name="day_circle_height">24dp</dimen>
+    <dimen name="day_circle_radius">120dp</dimen>
+    <dimen name="day_circle_stroke_width">1dp</dimen>
+
+
+    <dimen name="scale_34dp">34dp</dimen>
+    <dimen name="scale_40dp">40dp</dimen>
+    <dimen name="scale_46dp">46dp</dimen>
+    <dimen name="scale_50dp">50dp</dimen>
+    <dimen name="scale_55dp">55dp</dimen>
+    <dimen name="scale_60dp">60dp</dimen>
+    <dimen name="scale_65dp">65dp</dimen>
+    <dimen name="scale_70dp">70dp</dimen>
+    <dimen name="scale_75dp">75dp</dimen>
+    <dimen name="scale_45dp">45dp</dimen>
+
+
+    <dimen name="scale_80dp">80dp</dimen>
+    <dimen name="scale_85dp">85dp</dimen>
+    <dimen name="scale_90dp">90dp</dimen>
+    <dimen name="scale_100dp">100dp</dimen>
+    <dimen name="scale_105dp">105dp</dimen>
+    <dimen name="scale_110dp">110dp</dimen>
+    <dimen name="scale_120dp">120dp</dimen>
+    <dimen name="scale_130dp">130dp</dimen>
+    <dimen name="scale_150dp">150dp</dimen>
+
+    <dimen name="screen_left_margin">10dp</dimen>
+    <dimen name="screen_right_margin">10dp</dimen>
+    <!-- common text size -->
+    <dimen name="common_margin_very_small">5dp</dimen>
+    <dimen name="common_margin_small">7dp</dimen>
+    <dimen name="common_margin_medium">12dp</dimen>
+    <dimen name="common_margin_large">17dp</dimen>
+    <dimen name="common_margin_xlarge">22dp</dimen>
+    <dimen name="common_margin_xxlarge">27dp</dimen>
+    <dimen name="common_margin_xxxlarge">32dp</dimen>
+    <dimen name="text_size_very_very_small">6dp</dimen>
+    <dimen name="text_size_very_small">7dp</dimen>
+    <dimen name="text_size_9sp">9dp</dimen>
+    <dimen name="text_size_10sp">10dp</dimen>
+    <dimen name="text_size_so_so_small">11dp</dimen>
+    <dimen name="text_size_so_small">12sp</dimen>
+    <dimen name="text_size_11sp">11sp</dimen>
+    <dimen name="text_size_extra_small">13dp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">15sp</dimen>
+    <dimen name="text_size_medium_dp">17dp</dimen>
+    <dimen name="text_size_extra_medium">16sp</dimen>
+    <dimen name="text_size_more_extra_medium">18dp</dimen>
+    <dimen name="text_size_medium_circle">14dp</dimen>
+    <dimen name="text_size_medium_caller">14dp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_xlarge">25dp</dimen>
+    <dimen name="text_size_xxlarge">30dp</dimen>
+    <dimen name="text_size_xxxlarge">40dp</dimen>
+    <dimen name="text_size_extra_extra_medium">19dp</dimen>
+    <dimen name="text_margin_left">35dp</dimen>
+    <dimen name="text_proactive">18dp</dimen>
+    <dimen name="text_jioverify_success">16dp</dimen>
+    <dimen name="text_size_small_dp">15dp</dimen>
+    <dimen name="text_size_10sp_small">10sp</dimen>
+
+
+
+    <dimen name="common_padding_small">5dp</dimen>
+    <dimen name="padding_common_layout">15dp</dimen>
+    <dimen name="padding1_common_layout">80dp</dimen>
+    <dimen name="padding2_common_layout">110dp</dimen>
+    <!-- Text Dimen -->
+    <dimen name="sub_small_text_size">11dp</dimen>
+    <dimen name="small_text_size">11dp</dimen>
+    <dimen name="very_small_text_size">9dp</dimen>
+    <dimen name="medium_text_size">14dp</dimen>
+    <dimen name="large_text_size">16dp</dimen>
+
+    <!-- Padding Dimen -->
+    <dimen name="lpadding_5">5dip</dimen>
+    <dimen name="lpadding_3">3dip</dimen>
+    <dimen name="lpadding_1">1dip</dimen>
+    <dimen name="lpadding_2">2dip</dimen>
+    <dimen name="lpadding_4">4dip</dimen>
+    <dimen name="lpadding_10">10dip</dimen>
+    <dimen name="lpadding_20">20dip</dimen>
+    <dimen name="lpadding_40">50dip</dimen>
+    <dimen name="lpadding_15">15dip</dimen>
+    <dimen name="lpadding_7">9dip</dimen>
+
+    <!-- Margin Dimen -->
+    <dimen name="lmargin_15">15dip</dimen>
+    <dimen name="lmargin_12">12dip</dimen>
+    <dimen name="lmargin_30">30dip</dimen>
+    <dimen name="lmargin_32">32dip</dimen>
+    <dimen name="lmargin_40">50dip</dimen>
+    <dimen name="lmargin_10">6dip</dimen>
+    <dimen name="lmargin_3">3dip</dimen>
+    <dimen name="lmargin_2">2dip</dimen>
+    <dimen name="lmargin_1">1dp</dimen>
+    <dimen name="lmargin_5">5dip</dimen>
+
+    <dimen name="button_text_size">18dp</dimen>
+    <dimen name="button_height">44dp</dimen>
+
+    <!-- My Profile -->
+    <dimen name="mp_profile_photo_w_h">85dp</dimen>
+    <!-- wheel text size -->
+    <dimen name="set_notice_text_size">17dp</dimen>
+    <!-- View Sizes -->
+    <dimen name="view_size_legend_coverage">15dp</dimen>
+    <dimen name="circle_amount">160dp</dimen>
+    <dimen name="view_size_totol_usage">12dp</dimen>
+
+    <!-- Stoke Size -->
+    <dimen name="stoke_size_transfer_amount">7dp</dimen>
+    <!-- Button Dimen -->
+    <dimen name="button_size_thick">22dp</dimen>
+
+    <!-- Notification Dimen -->
+    <dimen name="notification_image_size">120dp</dimen>
+
+    <!--Service Request-->
+    <dimen name="service_request_add_ll">54dp</dimen>
+    <dimen name="srd_text_size_title">17dp</dimen>
+    <dimen name="srd_text_size_content">15dp</dimen>
+    <dimen name="srd_text_size_content_hint">10dp</dimen>
+
+    <!--Padding for Text & drawable in Drawer Menu-->
+    <dimen name="text_drawable_padding_drawer_menu">10dp</dimen>
+
+    <!--Text size for my usage graph -->
+
+    <!--My Apps-->
+    <dimen name="my_app_icon_size">60dp</dimen>
+    <dimen name="grid_12">35dp</dimen>
+    <dimen name="height_for_security_password">50dp</dimen>
+
+    <!-- update dialog dimen-->
+
+    <!-- btn selector -->
+    <dimen name="btn_selector">30dp</dimen>
+
+    <dimen name="tab_text_size">16dp</dimen>
+    <dimen name="home_expiry_text_padding">2dp</dimen>
+    <dimen name="padding_guided_text">6dp</dimen>
+
+    <dimen name="jpo_rating_marging">50px</dimen>
+    <dimen name="app_widget_width">250dp</dimen>
+    <dimen name="jwo_home_padding">50dp</dimen>
+    <dimen name="jpm_home_padding">28dp</dimen>
+
+    <!--Newly added for dashboard-->
+    <dimen name="dashbaord_small_text_size">12dp</dimen>
+    <dimen name="dashbaord_icon_margin">18dp</dimen>
+
+    <dimen name="banner_title_font_size">34dp</dimen>
+    <dimen name="subtitle_font_size">24dp</dimen>
+    <dimen name="body_title_font_size">16dp</dimen>
+    <dimen name="banner_truck_icon_height">20dp</dimen>
+    <dimen name="banner_truck_icon_width">26dp</dimen>
+    <dimen name="faq_category_image">40dp</dimen>
+
+    <dimen name="jiotalk_girl_image">160dp</dimen>
+    <dimen name="jiotalk_girl_margintop">35dp</dimen>
+    <dimen name="jiotalk_girl_margin_top_reminder_badge">45dp</dimen>
+    <dimen name="jiotalk_microphone_marginbottom">55dp</dimen>
+    <dimen name="jiotalk_edittext_height">45dp</dimen>
+    <dimen name="jiotalk_more_bottom">15dp</dimen>
+    <dimen name="lmargin_jiotalk_15">15dip</dimen>
+    <dimen name="text_size_large_jiotalk">25dp</dimen>
+    <dimen name="jiotalk_text_size_medium1">18dp</dimen>
+    <dimen name="jiotalk_main_screen_something">18dp</dimen>
+    <dimen name="hello_jio_sms">130dp</dimen>
+    <dimen name="banner_new_design_hight">130dp</dimen>
+    <dimen name="font_30dp">30dp</dimen>
+    <dimen name="font_16dp">16dp</dimen>
+    <dimen name="text_size_12dp">12dp</dimen>
+    <dimen name="platinum_size">27dp</dimen>
+    <dimen name="jiotalk_battery_margin_text">40dp</dimen>
+    <dimen name="jiotalk_margin_temp">25dp</dimen>
+    <dimen name="jiotalk_battery_margin_right">55dp</dimen>
+    <dimen name="jiotalk_margin_text_right">75dp</dimen>
+
+    <dimen name="view_details_width">53dp</dimen>
+    <dimen name="view_details_height">18dp</dimen>
+
+    <dimen name="calender_width">19dp</dimen>
+    <dimen name="calender_height">20dp</dimen>
+    <dimen name="friends_dialog_width">280dp</dimen>
+    <dimen name="friends_dialog_height">150dp</dimen>
+    <dimen name="commond_line_height">1px</dimen>
+
+    <dimen name="header_height">60dp</dimen>
+    <dimen name="title_header_height">59dp</dimen>
+</resources>

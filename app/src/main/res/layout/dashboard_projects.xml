@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/scale_16dp"
+    android:paddingRight="@dimen/scale_16dp"
+    android:paddingTop="@dimen/scale_16dp">
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_dashboard_projects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/projects"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/white_rounded_corner_bg"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dashboard_projects">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+
+            app:layout_constraintEnd_toStartOf="@+id/card2"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_project_count1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lmargin_15"
+                android:gravity="center"
+                android:paddingTop="@dimen/scale_10dp"
+                android:text="0"
+                android:textColor="@color/blue_text"
+                android:textSize="@dimen/text_size_large"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_project_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginTop="@dimen/scale_10dp"
+                android:layout_marginRight="@dimen/scale_16dp"
+                android:gravity="center"
+                android:paddingBottom="@dimen/scale_10dp"
+                android:text="@string/surveys"
+                android:textColor="@color/text_color_grey"
+                android:textSize="@dimen/text_size_so_small"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_project_count1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/scale_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/card3"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/card1"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_project_count2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lmargin_15"
+                android:gravity="center"
+                android:paddingTop="@dimen/scale_10dp"
+                android:text="0"
+                android:textColor="@color/blue_text"
+                android:textSize="@dimen/text_size_large"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_project_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginTop="@dimen/scale_10dp"
+                android:layout_marginRight="@dimen/scale_16dp"
+                android:paddingBottom="@dimen/scale_16dp"
+                android:text="@string/atp"
+                android:textSize="@dimen/text_size_so_small"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/txt_project_count2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--</androidx.cardview.widget.CardView>-->
+
+        <!--<androidx.cardview.widget.CardView
+    android:layout_width="0dp"
+    android:layout_height="100dp"
+    android:id="@+id/card3"
+    app:cardCornerRadius="@dimen/scale_2dp"
+    app:cardUseCompatPadding="true"
+    android:layout_marginBottom="@dimen/scale_16dp"
+    android:layout_marginLeft="@dimen/scale_10dp"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toEndOf="@id/card2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/card2"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_project_count3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lmargin_15"
+                android:gravity="center"
+                android:paddingTop="@dimen/scale_10dp"
+                android:text="0"
+                android:textColor="@color/blue_text"
+                android:textSize="@dimen/text_size_large"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_project_title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginTop="@dimen/scale_10dp"
+                android:layout_marginRight="@dimen/scale_16dp"
+                android:paddingBottom="@dimen/scale_10dp"
+                android:text="@string/supervisory"
+                android:textSize="@dimen/text_size_so_small"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/txt_project_count3" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

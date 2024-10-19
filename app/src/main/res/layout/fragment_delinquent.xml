@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:padding="@dimen/_10sdp"
+    android:layout_height="match_parent">
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_delinquent_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delinquent"
+        android:textColor="@color/black"
+        android:padding="@dimen/_5sdp"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/delingentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/txt_delinquent_title"
+
+        ></androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
+</layout>

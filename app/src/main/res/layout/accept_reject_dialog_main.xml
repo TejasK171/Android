@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:layout_margin="@dimen/_10sdp"
+    android:layout_gravity="center"
+    android:background="@drawable/white_rounded_corner_bg"
+    android:orientation="vertical" >
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Accept"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/white"
+        android:background="@color/blue_text"
+        android:padding="@dimen/_10sdp"
+        ></com.jio.jioinfra.custom.TextViewLight>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_descreption"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:maxLength="255"
+        android:gravity="top"
+        android:padding="@dimen/_10sdp"
+        android:hint=""
+        android:textColor="@color/black"
+        android:background="@drawable/background_rounded_red"
+        ></androidx.appcompat.widget.AppCompatEditText>
+
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/maxText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/black"
+        android:layout_gravity="right"
+
+        android:layout_marginRight="@dimen/_10sdp"
+        android:gravity="right"
+        android:paddingRight="@dimen/_10sdp"
+        ></com.jio.jioinfra.custom.TextViewLight>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:orientation="horizontal"
+    >
+    <Button
+        android:id="@+id/btn_cancle"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/blue_rounded_corner_bg"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:layout_weight="1"
+        android:text="Cancel"
+
+
+        ></Button>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_rounded_corner_bg"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
+        android:text="Submit"
+        android:layout_weight="1"
+
+
+        ></Button>
+
+</LinearLayout>
+
+</LinearLayout>

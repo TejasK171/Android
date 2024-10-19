@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+   android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="4"
+    android:paddingLeft="@dimen/scale_10dp"
+    android:paddingTop="@dimen/scale_5dp"
+    android:orientation="horizontal">
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_stage"
+        android:layout_width="0dp"
+        android:paddingRight="@dimen/scale_4dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:textSize="@dimen/text_size_so_small"
+        android:text="@string/stage"/>
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_today"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:textSize="@dimen/text_size_so_small"
+        android:text="@string/today"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_yday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textSize="@dimen/text_size_so_small"
+        android:text="@string/today"/>
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/txt_yday_diff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="@color/blue_text"
+            android:textSize="@dimen/text_size_10sp_small"
+            android:text=""/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_status"
+        android:layout_width="0dp"
+        android:layout_weight="0.2"
+        android:layout_height="20dp"/>
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_percentage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:textSize="@dimen/text_size_so_small"
+        android:text=""/>
+
+</LinearLayout>

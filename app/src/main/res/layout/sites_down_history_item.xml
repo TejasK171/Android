@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/white_rounded_corner_bg"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        android:visibility="visible"
+        android:weightSum="3">
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/txtStartDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="Start date"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/txtAgeing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:gravity="left"
+            android:text="Ageing"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/txt_ic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Impacted Customers"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp" />
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+
+        android:background="@color/light_grey"
+       android:layout_below="@+id/ll" />
+
+</LinearLayout>

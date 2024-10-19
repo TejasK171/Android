@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/scale_2dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/scale_15dp"
+                    android:layout_height="@dimen/scale_15dp"
+                    android:layout_margin="@dimen/scale_15dp"
+                    android:background="@color/hosp_dells_yellow"
+                    android:gravity="left|center_vertical" />
+
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/scale_15dp"
+                    android:text="00:00 - 02:00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/scale_15dp"
+                    android:layout_height="@dimen/scale_15dp"
+                    android:layout_margin="@dimen/scale_15dp"
+                    android:background="@color/icu_dells_yellow"
+                    android:gravity="left|center_vertical" />
+
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/scale_15dp"
+                    android:text="02:00 - 05:00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/scale_15dp"
+                    android:layout_height="@dimen/scale_15dp"
+                    android:layout_margin="@dimen/scale_15dp"
+                    android:background="@color/dead_dells_orange"
+                    android:gravity="left|center_vertical" />
+
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/scale_15dp"
+                    android:text="05:00 - above" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

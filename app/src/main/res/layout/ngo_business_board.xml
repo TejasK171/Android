@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/scale_16dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cnstrntL_activations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/ngo_journey_item_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activations"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrntL_activations_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ngo_journey_item_header">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/container"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/scale_16dp"
+                        app:cardCornerRadius="@dimen/scale_2dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toStartOf="@+id/container1"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_act_title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_act_count1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="30sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_act_title1" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_percentage1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text=""
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_act_title1" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_sub_title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_act_count1" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/container1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/scale_10dp"
+                        android:layout_marginBottom="@dimen/scale_16dp"
+                        app:cardCornerRadius="@dimen/scale_2dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@id/container"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_act_title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Yesterday"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_act_count2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="30sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_act_title2" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_percentage2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text=""
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_act_title2" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_sub_title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_act_count2" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/ngo_rv_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="4"
+                    app:layout_constraintTop_toBottomOf="@+id/cnstrntL_activations_data">
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Date" />
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Entered" />
+
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Activated" />
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Success" />
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ngo_journey_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/ngo_rv_header" />
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_trend"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:gravity="right"
+                    android:text="@string/trend"
+                    android:textColor="@color/black"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ngo_journey_rv" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cnstrntL_mnp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/cnstrntL_recharge"
+                app:layout_constraintTop_toBottomOf="@id/cnstrntL_activations">
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/mnp_item_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mnp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrntL_mnp_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mnp_item_header">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/container_mnp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/scale_16dp"
+                        app:cardCornerRadius="@dimen/scale_2dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toStartOf="@+id/container1_mnp"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_mnp_title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_mnp_count1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="30sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_mnp_title1" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_mnp_percentage1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text=""
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_mnp_title1" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_mnp_sub_title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_mnp_count1" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/container1_mnp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/scale_10dp"
+                        android:layout_marginBottom="@dimen/scale_16dp"
+                        app:cardCornerRadius="@dimen/scale_2dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@id/container_mnp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_mnp_title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_mnp_count2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="30sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_mnp_title2" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_mnp_percentage2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text=""
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_mnp_title2" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_mnp_sub_title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_mnp_count2" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/mnp_rv_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="4"
+                    app:layout_constraintTop_toBottomOf="@+id/cnstrntL_mnp_data">
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Date" />
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Entered" />
+
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Activated" />
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Success" />
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mnp_journey_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/mnp_rv_header" />
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_mnp_trend"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:gravity="right"
+                    android:text="@string/trend"
+                    android:textColor="@color/black"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mnp_journey_rv" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cnstrntL_recharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/cnstrntL_macd"
+                app:layout_constraintTop_toBottomOf="@id/cnstrntL_mnp">
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/recharge_item_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recharge"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrntL_recharge_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recharge_item_header">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/container_recharge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/scale_16dp"
+                        app:cardCornerRadius="@dimen/scale_2dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toStartOf="@+id/container1_recharge"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_recharge_title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_recharge_count1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="30sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_recharge_title1" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_recharge_percentage1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text=""
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_recharge_title1" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_recharge_sub_title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_recharge_count1" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/container1_recharge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/scale_10dp"
+                        android:layout_marginBottom="@dimen/scale_16dp"
+                        app:cardCornerRadius="@dimen/scale_2dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@id/container_recharge"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_recharge_title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_recharge_count2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="30sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_recharge_title2" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_recharge_percentage2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text=""
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_recharge_title2" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_recharge_sub_title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_recharge_count2" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/recharge_rv_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="4"
+                    app:layout_constraintTop_toBottomOf="@+id/cnstrntL_recharge_data">
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Date" />
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Entered" />
+
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Activated" />
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Success" />
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recharge_journey_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/recharge_rv_header" />
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_recharge_trend"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:gravity="right"
+                    android:text="@string/trend"
+                    android:textColor="@color/black"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recharge_journey_rv" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cnstrntL_macd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/cnstrntL_recharge">
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/macd_item_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/macd"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrntL_macd_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/macd_item_header">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/container_macd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/scale_16dp"
+                        app:cardCornerRadius="@dimen/scale_2dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toStartOf="@+id/container1_macd"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_macd_title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_macd_count1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="30sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_macd_title1" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_macd_percentage1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text=""
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_macd_title1" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_macd_sub_title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_macd_count1" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/container1_macd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/scale_10dp"
+                        android:layout_marginBottom="@dimen/scale_16dp"
+                        app:cardCornerRadius="@dimen/scale_2dp"
+                        app:cardUseCompatPadding="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@id/container_macd"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_macd_title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_macd_count2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="30sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_macd_title2" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_macd_percentage2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:text=""
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_macd_title2" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_macd_sub_title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/scale_16dp"
+                                android:layout_marginTop="@dimen/scale_3dp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:text="Today"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txt_macd_count2" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/macd_rv_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="4"
+                    app:layout_constraintTop_toBottomOf="@+id/cnstrntL_macd_data">
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Date" />
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Entered" />
+
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Activated" />
+
+                    <com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Success" />
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/macd_journey_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/macd_rv_header" />
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_macd_trend"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:gravity="right"
+                    android:text="@string/trend"
+                    android:textColor="@color/black"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/macd_journey_rv" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

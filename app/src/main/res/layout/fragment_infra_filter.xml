@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbarId"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="#214796"
+
+            tools:ignore="MissingConstraints">
+
+            <com.jio.jioinfra.custom.TextViewBold
+                android:id="@+id/txt_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:text="CLEAR"
+
+                android:paddingTop="@dimen/_10sdp"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:paddingRight="@dimen/_10sdp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/crossImg"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                app:srcCompat="@drawable/ic_cross"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                ></androidx.appcompat.widget.AppCompatImageView>
+            <com.jio.jioinfra.custom.TextViewBold
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintLeft_toRightOf="@+id/crossImg"
+                android:text="@string/sort_filter"
+                android:paddingLeft="@dimen/_10sdp"
+
+                android:paddingTop="@dimen/_10sdp"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/toolbarId"
+
+
+            android:background="@color/bg_color_grey"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:orientation="horizontal"
+
+            android:weightSum="2">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_color_grey"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                >
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_ageing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/_10sdp"
+                    android:gravity="left"
+                    android:text="Ageing"
+                    ></com.jio.jioinfra.custom.TextViewMedium>
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_inpact_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:gravity="left"
+                    android:visibility="visible"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Impacted Customer"
+                    ></com.jio.jioinfra.custom.TextViewMedium>
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_work_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:gravity="left"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Work Order"
+                    ></com.jio.jioinfra.custom.TextViewMedium>
+
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_geography"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Geography"
+                    ></com.jio.jioinfra.custom.TextViewMedium>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                >
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listRecycleview"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+                    <LinearLayout
+                        android:id="@+id/regin_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/region_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="vertical"
+                            >
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_region"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/login_edt_grey"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:gravity="left"
+                                android:text="Region"
+                                ></com.jio.jioinfra.custom.TextViewMedium>
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/dropdownlistSpinerRegion"
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:spinnerMode="dropdown"
+
+                                ></androidx.appcompat.widget.AppCompatSpinner>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:background="@color/login_edt_grey"
+                                ></View>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/state_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="vertical"
+                            >
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/login_edt_grey"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:gravity="left"
+                                android:text="R4G State"
+                                ></com.jio.jioinfra.custom.TextViewMedium>
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/dropdownlistSpinerState"
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:layout_margin="@dimen/_5sdp"
+
+                                ></androidx.appcompat.widget.AppCompatSpinner>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:background="@color/login_edt_grey"
+                                ></View>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/mpll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="vertical"
+                            >
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_mp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/login_edt_grey"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:gravity="left"
+                                android:text="MP"
+                                ></com.jio.jioinfra.custom.TextViewMedium>
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/dropdownlistSpinerMp"
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:layout_margin="@dimen/_5sdp"
+
+                                ></androidx.appcompat.widget.AppCompatSpinner>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:background="@color/login_edt_grey"
+                                ></View>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/jcll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:orientation="vertical"
+                            >
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_jc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_12sdp"
+                                android:textColor="@color/login_edt_grey"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:paddingLeft="@dimen/_5sdp"
+
+                                android:gravity="left"
+                                android:text="JC"
+                                ></com.jio.jioinfra.custom.TextViewMedium>
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/dropdownlistSpinerJc"
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:layout_margin="@dimen/_5sdp"
+
+                                ></androidx.appcompat.widget.AppCompatSpinner>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height=".5dp"
+                                android:background="@color/login_edt_grey"
+                                ></View>
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/scale_16dp"
+            android:padding="@dimen/_10sdp"
+            android:text="Apply"
+            android:textAllCaps="false"
+            android:background="@color/toolbar_bg"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            tools:ignore="MissingConstraints">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

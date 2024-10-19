@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:text="Order to Activation Journey"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+        <com.jio.siops_ngo.calendar.widget.CollapsibleCalendar
+            android:id="@+id/collapsibleCalendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_date"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:buttonLeft_drawableTintColor="@android:color/white"
+            app:buttonRight_drawableTintColor="@android:color/white"
+            app:eventColor="@android:color/white"
+            app:expandIconColor="@color/google_red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:primaryColor="@color/white"
+            app:selectedItem_background="@drawable/circle_white_solid_background"
+            app:selectedItem_textColor="@color/white"
+            app:textColor="@color/jioinfra_gray"
+            app:todayItem_background="@drawable/circle_white_solid_background"
+            app:todayItem_textColor="@color/white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/journeyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll"
+            android:layout_below="@+id/collapsibleCalendarView"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/txt_date"
+
+
+            />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_region"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_blue_border_bg"
+                android:gravity="center"
+                android:text="Regions"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_gt"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_blue_border_bg"
+                android:gravity="center"
+                android:text="GT"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"></com.jio.jioinfra.custom.TextViewMedium>
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_rr"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_blue_border_bg"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="RR"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+        </LinearLayout>
+
+        <!--      <Button-->
+        <!--          android:id="@+id/button"-->
+        <!--          android:layout_width="wrap_content"-->
+        <!--          android:layout_height="wrap_content"-->
+        <!--          android:text="Regions"-->
+        <!--          android:textAllCaps="false"-->
+        <!--          android:textSize="@dimen/_14sdp"-->
+        <!--          android:textColor="@color/white"-->
+        <!--          android:background="@drawable/region_rounded"-->
+        <!--          app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--          app:layout_constraintEnd_toEndOf="parent"-->
+        <!--          app:layout_constraintHorizontal_bias="0.049"-->
+        <!--          android:layout_margin="@dimen/_10sdp"-->
+        <!--          app:layout_constraintStart_toStartOf="parent"-->
+
+        <!--       />-->
+
+        <!--      <Button-->
+        <!--          android:id="@+id/button2"-->
+        <!--          android:layout_width="wrap_content"-->
+        <!--          android:layout_height="wrap_content"-->
+        <!--          android:layout_margin="@dimen/_10sdp"-->
+        <!--          android:layout_marginStart="16dp"-->
+        <!--          android:background="@drawable/region_rounded"-->
+        <!--          android:text="GT"-->
+        <!--          android:textColor="@color/white"-->
+        <!--          android:textSize="@dimen/_14sdp"-->
+        <!--          app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--          app:layout_constraintStart_toEndOf="@+id/button"-->
+        <!--          app:layout_constraintTop_toBottomOf="@+id/journeyList"-->
+        <!--          app:layout_constraintVertical_bias="1.0" />-->
+
+        <!--      <Button-->
+        <!--          android:id="@+id/button3"-->
+        <!--          android:layout_width="wrap_content"-->
+        <!--          android:layout_height="wrap_content"-->
+
+        <!--          android:layout_margin="@dimen/_10sdp"-->
+        <!--          android:text="RR"-->
+        <!--          android:textColor="@color/white"-->
+        <!--          android:textSize="@dimen/_14sdp"-->
+        <!--          android:background="@drawable/region_rounded"-->
+        <!--          app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--          app:layout_constraintStart_toEndOf="@+id/button2" />-->
+
+
+    </RelativeLayout>
+</layout>

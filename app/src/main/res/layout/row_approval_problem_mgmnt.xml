@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/scale_16dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cnstrntL_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_approve"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/scale_10dp"
+            android:layout_marginTop="@dimen/scale_10dp"
+            android:layout_marginRight="@dimen/scale_16dp"
+            android:paddingTop="2dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="2dp"
+            app:cardBackgroundColor="@color/acknowladge_back"
+            app:cardCornerRadius="@dimen/scale_10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:paddingTop="@dimen/scale_2dp"
+                android:paddingBottom="@dimen/scale_4dp"
+                android:text="@string/approve"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_reject"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/scale_16dp"
+            android:layout_marginTop="@dimen/scale_10dp"
+            android:layout_marginRight="@dimen/scale_16dp"
+            android:paddingTop="2dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="2dp"
+            app:cardBackgroundColor="@color/red_color_code"
+            app:cardCornerRadius="@dimen/scale_10dp"
+            app:layout_constraintLeft_toRightOf="@+id/card_approve"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:paddingTop="@dimen/scale_2dp"
+                android:paddingBottom="@dimen/scale_4dp"
+                android:text="@string/reject"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_problem_id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lmargin_15"
+        android:gravity="left"
+        android:paddingTop="@dimen/scale_10dp"
+        android:text="Problem ID"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_so_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cnstrntL_buttons" />
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_problem_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingTop="@dimen/scale_10dp"
+        android:textColor="@color/txt_grey_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_problem_id_title"
+        tools:text="BPM17884" />
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_problem_descr_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_10dp"
+        android:gravity="left"
+        android:paddingTop="@dimen/scale_10dp"
+        android:text="Problem Description"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_so_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_problem_id" />
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_problem_descr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingTop="@dimen/scale_10dp"
+        android:textColor="@color/txt_grey_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_problem_descr_title"
+        tools:text="RJIL : Users were unable to access PIM for JPP and JM applications between 10:57 Hrs. To 11.35 Hrs." />
+
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_rca_domain_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lmargin_15"
+        android:gravity="left"
+        android:paddingTop="@dimen/scale_10dp"
+        android:text="RCA Domain"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_so_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_problem_descr" />
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_rca_domain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:paddingTop="@dimen/scale_10dp"
+        android:textColor="@color/txt_grey_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_rca_domain_title"
+        tools:text="ISO-TOPS" />
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_req_platform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lmargin_15"
+        android:gravity="center"
+        android:paddingTop="@dimen/scale_10dp"
+        android:text="Platform RCA Approver"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_so_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gl"
+        app:layout_constraintTop_toBottomOf="@+id/txt_problem_descr" />
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_rca_approver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/scale_10dp"
+        android:textColor="@color/txt_grey_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gl"
+        app:layout_constraintTop_toBottomOf="@id/txt_rca_domain_title"
+        tools:text="Rajiv.Bahl" />
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txtrcaReport_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lmargin_15"
+        android:gravity="center"
+        android:paddingTop="@dimen/scale_10dp"
+        android:text="Description:"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_so_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_rca_approver" />
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txtRcaReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_5dp"
+        android:textColor="@color/txt_grey_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtrcaReport_title"
+        tools:text="Ownership: Nitin1 Parashar Update: Users were unable to access PIM for JPP and JM applications between 10.57 Hrs. To 11.35 Hrs. The primary vault got triggered event, may be due to hardware issue, which disrupted NTP sync. Exact Cause for the issue is awaited from CyberArk #Case No 01017182" />
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txtPrevMeasure_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/lmargin_15"
+        android:gravity="center"
+        android:paddingTop="@dimen/scale_10dp"
+        android:text="Description:"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_so_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRcaReport" />
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txtPrevMeasure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_5dp"
+        android:textColor="@color/txt_grey_color"
+        android:textSize="@dimen/text_size_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPrevMeasure_title"
+        tools:text="To get the final RCA from CyberArk, why the event Got triggered from Primary server 10.140.144.100 To check feasibility with CyberArk about alert configuration." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

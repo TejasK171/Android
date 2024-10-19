@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/search_item"
+        android:icon="@drawable/ic_ageing_mustard"
+        android:title="00:00 - 02:00" />
+    <item android:id="@+id/upload_item"
+        android:icon="@drawable/ic_ageing_orange"
+        android:title="02:00 - 05:00" />
+    <item android:id="@+id/copy_item"
+        android:icon="@drawable/ic_ageing_red"
+        android:title="05:00 - above" />
+</menu>

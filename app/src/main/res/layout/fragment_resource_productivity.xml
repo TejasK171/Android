@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_governance_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/resource_productivity"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cnstntL_spnr_bu"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_governance_title"
+
+            android:background="@drawable/spener_item"
+            android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/spnr_bu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="30dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/spener_item_drop"
+                android:layout_gravity="center"
+                android:tint="@color/white"
+                android:layout_marginLeft="1sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="@dimen/_1sdp"
+                android:src="@drawable/down_arrow_icon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--<com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_select_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/select_application"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/cnstntL_spnr_bu"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_search_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/search_application"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/txt_select_app"
+            app:layout_constraintLeft_toLeftOf="parent"/>-->
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cnstrtL_search"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/cnstntL_spnr_bu"
+            android:layout_width="match_parent"
+            android:background="@drawable/grey_rounded_corner_bg"
+            android:layout_height="0dp">
+
+            <!--<EditText
+                android:id="@+id/edt_search"
+                android:padding="@dimen/_5sdp"
+                android:drawableLeft="@drawable/ic_search"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColorHint="@color/txt_grey_color"
+                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:hint="@string/search"
+                android:singleLine="true"
+                android:imeOptions="actionGo"
+                android:layout_height="wrap_content"/>-->
+
+            <AutoCompleteTextView
+                android:id="@+id/autoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:text=""
+                android:textSize="@dimen/text_size_medium"
+                android:drawableLeft="@drawable/ic_search"
+                android:background="@color/transparent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="@string/search"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_resource_productivity"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/white_rounded_corner_bg"
+            android:layout_below="@+id/txt_total_coun1"
+            android:paddingRight="@dimen/scale_5dp"
+            android:paddingBottom="@dimen/scale_10dp"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/scale_10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cnstrtL_search"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

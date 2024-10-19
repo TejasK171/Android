@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:background="@color/body_bg"
+        android:layout_marginBottom="8dp">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+
+       >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.jio.jioinfra.custom.TextViewBold
+        android:id="@+id/txt_product_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resource_productivity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:backgroundTint="@color/jioinfra_gray"
+        android:padding="@dimen/_2sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/black"
+        />
+    <com.jio.jioinfra.custom.TextViewBold
+        android:id="@+id/txt_live_history_header_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Live Dashboard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_product_header"
+        android:gravity="center"
+        android:padding="@dimen/_2sdp"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/login_edt_grey"
+        />
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_live_history_header_id"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:textSize="@dimen/_11sdp"
+        android:textColor="@color/dcb_grey_txt_color"
+        />
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_live_and_history_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Histroic Dashboard"
+        android:layout_marginRight="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_app_name"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="left"
+        android:padding="@dimen/_2sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/dcb_grey_txt_color"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cnstrntL_datetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_live_and_history_dashboard">
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginRight="@dimen/_5sdp"
+        android:paddingRight="10dp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/text_color_grey"
+        />
+
+
+    <!--<ImageView
+        android:id="@+id/img_calander_id"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="@drawable/ic_calendar"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        app:tint="@color/dcb_grey_txt_color"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/txt_date"
+        ></ImageView>-->
+
+        <ImageView
+            android:id="@+id/img_calander_id"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:foregroundGravity="center"
+            android:src="@drawable/ic_calendar"
+            android:tint="@color/dcb_grey_txt_color"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/txt_date" />
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00 hrs-24:00 hrs"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"
+        android:visibility="visible"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/login_edt_grey"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cnstrntL_calendar_sd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/cnstrntL_datetime"
+        >
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/mainList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:layout_constraintTop_toBottomOf="@+id/cnstrntL_calendar_sd">
+
+</androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

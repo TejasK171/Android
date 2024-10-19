@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewMedium
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25 nov 2019"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            />
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.25 mbps"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/text_color_grey"
+            android:textSize="@dimen/_12sdp"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/text_color_grey"
+
+        ></View>
+
+</LinearLayout>

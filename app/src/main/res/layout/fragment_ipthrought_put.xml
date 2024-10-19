@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+ android:background="#F6F6F6"
+    tools:context=".fragment.IPThroughtPutFragment">
+
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_dashboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IP ThroughPut"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+
+        android:textColor="@color/text_color_grey"
+        android:textSize="@dimen/_14sdp"
+
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/lnr_radiobutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/_10sdp"
+
+        android:background="@drawable/rounded_corner_blue_border_bg"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        android:weightSum="4">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/blue_text"
+                android:text="7 days"
+                android:checked="true"
+                android:theme="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/rb_p1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="30 days"
+                android:theme="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/rb_rp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="60 days"
+                android:theme="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/rb_ipcolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="90 days"
+                android:theme="@style/RadioButton" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:background="#E6E6E6"
+        android:layout_gravity="center"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewMedium
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+
+
+            android:textColor="@color/text_color_grey"
+            android:textSize="@dimen/_12sdp"
+            />
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ThroughPut"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+  android:layout_weight="1"
+
+            android:textColor="@color/text_color_grey"
+            android:textSize="@dimen/_12sdp"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+
+             />
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/throughputrecycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rel_header"
+        android:paddingRight="@dimen/scale_5dp"
+        android:paddingBottom="@dimen/scale_10dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:paddingLeft="@dimen/scale_5dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</LinearLayout>
+</layout>

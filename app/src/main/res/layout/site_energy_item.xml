@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/scale_2dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_siteid_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="@dimen/_10sdp"
+                android:text="Site ID: "
+                android:textColor="@color/blue_text"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_siteid_value"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="MU-MMUB-JC01-0001 "
+                android:textColor="@color/blue_text"
+                app:layout_constraintLeft_toRightOf="@+id/txt_siteid_title"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

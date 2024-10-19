@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_apply_leave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/scale_16dp"
+                android:paddingTop="@dimen/scale_16dp"
+                android:text="@string/apply_leave"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_sep"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="@color/txt_grey_color"
+                app:layout_constraintTop_toBottomOf="@+id/txt_apply_leave"
+                />
+
+            <!--<androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/view_sep">-->
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/scale_2dp"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginRight="@dimen/scale_16dp"
+                android:layout_marginTop="@dimen/scale_16dp"
+                app:layout_constraintTop_toBottomOf="@+id/view_sep">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrntL_date_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/scale_10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cnstrntL_sd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/cnstrntL_ed"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cnstrnt_sd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_start_date_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/scale_10dp"
+                                android:text="@string/from_date"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_medium"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/img_calenda_sd"
+                                android:layout_width="@dimen/scale_18dp"
+                                android:layout_height="@dimen/scale_18dp"
+                                android:layout_marginLeft="@dimen/scale_10dp"
+                                android:layout_marginTop="@dimen/scale_10dp"
+                                android:foregroundGravity="center"
+                                android:src="@drawable/ic_calendar"
+                                android:tint="@color/dcb_grey_txt_color"
+                                app:layout_constraintLeft_toRightOf="@+id/txt_start_date_title"
+                                app:layout_constraintStart_toEndOf="@+id/txt_start_date_title"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.jio.jioinfra.custom.TextViewMedium
+                            android:id="@+id/txt_start_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/scale_10dp"
+                            android:text="--"
+                            android:textColor="@color/dcb_grey_txt_color"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cnstrnt_sd" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cnstrntL_ed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@+id/cnstrntL_sd"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cnstrnt_ed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_end_date_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/scale_10dp"
+                                android:text="@string/to_date"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_medium"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/img_calendar_ed"
+                                android:layout_width="@dimen/scale_18dp"
+                                android:layout_height="@dimen/scale_18dp"
+                                android:layout_marginLeft="@dimen/scale_10dp"
+                                android:layout_marginTop="@dimen/scale_10dp"
+                                android:foregroundGravity="center"
+                                android:src="@drawable/ic_calendar"
+                                android:tint="@color/dcb_grey_txt_color"
+                                app:layout_constraintStart_toEndOf="@+id/txt_end_date_title"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.jio.jioinfra.custom.TextViewMedium
+                            android:id="@+id/txt_end_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/scale_10dp"
+                            android:text="--"
+                            android:textColor="@color/dcb_grey_txt_color"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cnstrnt_ed" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+                <!--<androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrntL_date_selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cnstrntL_sd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/cnstrntL_ed"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cnstrnt_sd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_start_date_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lmargin_15"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/scale_10dp"
+                                android:text="@string/from_date"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_medium"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/img_calenda_sd"
+                                android:layout_width="@dimen/scale_18dp"
+                                android:layout_height="@dimen/scale_18dp"
+                                android:layout_marginLeft="@dimen/scale_10dp"
+                                android:layout_marginTop="@dimen/scale_25dp"
+                                android:foregroundGravity="center"
+                                android:src="@drawable/ic_calendar"
+                                android:tint="@color/dcb_grey_txt_color"
+                                app:layout_constraintLeft_toRightOf="@+id/txt_start_date_title"
+                                app:layout_constraintStart_toEndOf="@+id/txt_start_date_title"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.jio.jioinfra.custom.TextViewMedium
+                            android:id="@+id/txt_start_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/scale_10dp"
+                            android:text=""
+                            android:textColor="@color/dcb_grey_txt_color"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cnstrnt_sd" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cnstrntL_ed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@+id/cnstrntL_sd"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cnstrnt_ed"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_end_date_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lmargin_15"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/scale_10dp"
+                                android:text="@string/to_date"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_medium"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/img_calendar_ed"
+                                android:layout_width="@dimen/scale_18dp"
+                                android:layout_height="@dimen/scale_18dp"
+                                android:layout_marginLeft="@dimen/scale_10dp"
+                                android:layout_marginTop="@dimen/scale_25dp"
+                                android:foregroundGravity="center"
+                                android:src="@drawable/ic_calendar"
+                                android:tint="@color/dcb_grey_txt_color"
+                                app:layout_constraintStart_toEndOf="@+id/txt_end_date_title"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.jio.jioinfra.custom.TextViewMedium
+                            android:id="@+id/txt_end_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/scale_10dp"
+                            android:text=""
+                            android:textColor="@color/dcb_grey_txt_color"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cnstrnt_ed" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrntL_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@+id/cardview">
+
+                    <!--<CalendarView
+                        android:id="@+id/calendarView_sd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <CalendarView
+                        android:id="@+id/calendarView_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cnstrntL_calendar_sd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <CalendarView
+                            android:id="@+id/calendarView_sd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cnstrntL_calendar_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <!--<CalendarView
+                            android:id="@+id/calendarView_ed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />-->
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnsrntL_spnr_enode"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/scale_16dp"
+                    android:layout_marginTop="@dimen/scale_20dp"
+                    android:layout_marginRight="@dimen/scale_16dp"
+                    android:background="@drawable/spinner_blue_bg"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cnstrntL_calendar">
+
+
+                    <!--<com.jio.jioinfra.custom.TextViewMedium
+                        android:id="@+id/txt_leave_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:visibility="gone"
+                        app:layout_constraintRight_toLeftOf="@+id/cnstrntL_spnr_leave_type"
+                        android:paddingTop="@dimen/scale_10dp"
+                        android:text="@string/leave_type"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_small"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cnstrntL_spnr_leave_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/txt_leave_type"
+                        app:layout_constraintTop_toTopOf="parent">-->
+                    <Spinner
+                        android:id="@+id/spnr_leave_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:dropDownVerticalOffset="30dp"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_right_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="1sp"
+                        android:layout_marginRight="@dimen/_1sdp"
+                        android:src="@drawable/ic_blue_down_arrow"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="8dp"
+                        android:background="@color/dcb_grey_txt_color"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/img_right_arrow" />
+
+                    <!-- </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                    <!--<com.jio.jioinfra.custom.TextViewMedium
+                        android:layout_width="match_parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cnsrntL_spnr_enode"
+                        android:text="@string/leave_type"
+                        android:layout_height="wrap_content"></com.jio.jioinfra.custom.TextViewMedium>-->
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnsrntL_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="@dimen/scale_16dp"
+                    android:layout_marginTop="@dimen/scale_30dp"
+                    android:layout_marginRight="@dimen/scale_16dp"
+                    android:layout_marginBottom="@dimen/scale_16dp"
+                    android:background="@drawable/spinner_blue_bg"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cnsrntL_spnr_enode">
+
+
+                    <EditText
+                        android:id="@+id/edt_enter_reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:hint="Enter Reason"
+                        android:paddingLeft="@dimen/scale_5dp"
+                        android:paddingTop="@dimen/scale_5dp"
+                        android:text=""
+                        android:gravity="top"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/txt_grey_color"
+                        android:textSize="@dimen/_13sdp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+           <!-- </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <Button
+                android:id="@+id/btn_apply_leave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/scale_16dp"
+                android:layout_marginTop="@dimen/scale_10dp"
+                android:layout_marginRight="@dimen/scale_16dp"
+                android:layout_marginBottom="@dimen/scale_16dp"
+                android:background="@color/toolbar_bg"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cnsrntL_reason"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rel_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_bg"
+        android:paddingLeft="@dimen/scale_8dp"
+        android:paddingRight="@dimen/scale_8dp"
+        android:paddingTop="@dimen/_8sdp"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/ic_bck_button"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_back_arrow"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentInsetStart="0dp"
+            android:layout_toRightOf="@+id/ic_bck_button"
+            android:layout_centerVertical="true"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_first_letter"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/light_blue_circle_shape"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="S"
+                    android:visibility="gone"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/text_size_medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/scale_10dp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/txt_first_letter"
+                    app:layout_constraintStart_toEndOf="@+id/txt_first_letter"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_user_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/text_size_so_small"
+                    android:textColor="@color/mustard_color"
+                    app:layout_constraintStart_toEndOf="@+id/txt_first_letter"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_username" />
+
+                <ImageView
+                    android:id="@+id/img_home"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:background="@drawable/app_icon" />
+
+                <TextView
+                    android:id="@+id/txt_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:textColor="@android:color/white"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_more_extra_medium"
+                    android:text="NextGenOps"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrnt_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img_down_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_down_arrow" />
+
+                    <ImageView
+                        android:id="@+id/img_user"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:visibility="gone"
+                        android:textColor="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/img_down_arrow"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_profile_img" />
+
+
+                    <Button
+                        android:id="@+id/btnLogout"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/img_down_arrow"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/ic_logout" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel_notification"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/btnLogout"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/relative_layout1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/btnBadge"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/ic_bell_icon" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/txtBadge"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignRight="@id/relative_layout1"
+                            android:background="@drawable/item_count"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:textSize="7sp"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+
+                    </RelativeLayout>
+
+                    <!--<Button
+                        android:id="@+id/img_notification"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="@dimen/scale_5dp"
+                        android:background="@drawable/ic_bell_icon"
+                        android:textColor="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/img_user"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                    <TextView
+                        android:id="@+id/txt_notification_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="2dp"
+                        android:padding="@dimen/scale_2dp"
+                        android:paddingRight="@dimen/scale_5dp"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        app:layout_constraintRight_toLeftOf="@+id/img_user"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/scale_8dp"
+                    android:layout_marginBottom="@dimen/scale_5dp"
+                    android:elevation="2dp"
+                    android:textSize="@dimen/text_size_small"
+                    android:visibility="gone"
+                    android:padding="@dimen/scale_2dp"
+                    android:paddingRight="@dimen/scale_5dp"
+                    android:text="21st Nov, 2019, 08:45 pm"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cnstrnt_notification" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_40dp"
+            android:layout_below="@+id/toolbar"
+            android:visibility="gone"
+            android:background="@drawable/white_rounded_corner_bg"
+            android:paddingLeft="@dimen/scale_10dp"
+            android:paddingRight="@dimen/scale_10dp">
+
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_pan_india"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/geography"
+                android:textColor="@color/button_bg_color"
+                android:textSize="@dimen/text_size_so_small" />
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_search_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/txt_pan_india"
+                android:paddingLeft="@dimen/scale_5dp"
+                android:text="@string/pan_india"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small" />
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/change"
+                android:textColor="@color/button_bg_color"
+                android:textSize="@dimen/text_size_small" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/body_bg"
+        android:layout_below="@+id/rel_toolbar"></FrameLayout>
+
+
+    <com.jio.jioinfra.custom.DotProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>
+</layout>

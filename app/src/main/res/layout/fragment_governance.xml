@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_governance_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Governance board"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+
+            android:id="@+id/cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/scale_16dp"
+            android:layout_marginTop="@dimen/scale_16dp"
+            android:layout_marginRight="@dimen/scale_16dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="@dimen/_4sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/scale_2dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_governance_title">
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_res_productivity_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_50sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingRight="@dimen/_50sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/resource_productivity"
+                android:textColor="@color/dcb_grey_txt_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,1205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+        <LinearLayout
+            android:id="@+id/cnstrntL_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Data Completeness Board"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_filter"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/baseline_dehaze_black_18dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/viewId"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scale_1dp"
+                android:background="@color/txt_grey_color"
+                app:layout_constraintTop_toBottomOf="@+id/txt_path">
+
+
+            </View>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/viewId">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrntL_calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/viewId1">
+
+                    <CalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrntL_rb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/cnstrntL_calendar">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cnsrntL_spnr_small"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/spener_item"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/cnsrntL_spnr_enode"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <Spinner
+                            android:id="@+id/spnr_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:background="@android:color/transparent"
+                            android:dropDownVerticalOffset="30dp"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/_1sdp"
+                            android:layout_marginLeft="1sp"
+                            android:background="@drawable/spener_item_drop"
+                            android:src="@drawable/down_arrow_icon"
+                            android:tint="@color/white"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cnsrntL_spnr_enode"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/spener_item"
+                        android:orientation="horizontal"
+                        app:layout_constraintRight_toLeftOf="@+id/cnstrntL_pending_action"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <Spinner
+                            android:id="@+id/spnr_enode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:background="@android:color/transparent"
+                            android:dropDownVerticalOffset="30dp"
+                            android:gravity="center"
+                            android:spinnerMode="dropdown"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/_1sdp"
+                            android:layout_marginLeft="1sp"
+                            android:background="@drawable/spiner_item_gray"
+                            android:src="@drawable/down_arrow_icon"
+                            android:tint="@color/white"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--                    <RadioGroup-->
+                    <!--                        android:id="@+id/radio_group2"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginTop="@dimen/_8sdp"-->
+                    <!--                        android:layout_marginRight="@dimen/_15sdp"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:visibility=""-->
+                    <!--                        android:orientation="horizontal"-->
+                    <!--                        app:layout_constraintRight_toLeftOf="@+id/cnstrntL_pending_action"-->
+                    <!--                        app:layout_constraintTop_toTopOf="parent"-->
+
+                    <!--                        >-->
+
+                    <!--                        <RadioButton-->
+                    <!--                            android:id="@+id/rb_all"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:checked="true"-->
+                    <!--                            android:text="All"-->
+                    <!--                            android:textSize="@dimen/_10sdp" />-->
+
+                    <!--                        <RadioButton-->
+                    <!--                            android:id="@+id/rb_ag2"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:text="AG 2"-->
+                    <!--                            android:textSize="@dimen/_10sdp" />-->
+
+                    <!--                        <RadioButton-->
+                    <!--                            android:id="@+id/rb_ag1"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:text="AG 1"-->
+                    <!--                            android:textSize="@dimen/_10sdp" />-->
+
+
+                    <!--                        <RadioButton-->
+                    <!--                            android:id="@+id/rb_enb"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:text="eNB"-->
+                    <!--                            android:textSize="@dimen/_10sdp" />-->
+                    <!--                    </RadioGroup>-->
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cnstrntL_pending_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_reject"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:cardBackgroundColor="@color/red_color_code"
+                            app:cardCornerRadius="@dimen/scale_10dp"
+                            app:layout_constraintLeft_toRightOf="@+id/card_approve"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.jio.jioinfra.custom.TextViewMedium
+                                android:id="@+id/txt_pending_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@color/transparent"
+                                android:paddingTop="@dimen/scale_2dp"
+                                android:paddingBottom="@dimen/scale_4dp"
+                                android:text=""
+                                android:textColor="@color/white"
+
+                                android:textSize="10dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.cardview.widget.CardView>
+
+                        <com.jio.jioinfra.custom.TextViewMedium
+                            android:id="@+id/txt_pending_action"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Open Action"
+                            android:textColor="@color/txt_grey_color"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card_reject" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:elevation="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrnt_main_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_granite_header"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+
+                    >
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/header_cnstrnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="@dimen/lmargin_10"
+                        android:background="@drawable/white_rounded_corner_bg"
+                        android:visibility="visible"
+                        app:layout_constraintHorizontal_weight="2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/total_count_cnsrntl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingBottom="@dimen/scale_16dp"
+                            app:layout_constraintEnd_toStartOf="@+id/header_divider"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/lmargin_15"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/scale_10dp"
+                                android:text="@string/total_reading_site"
+
+                                android:textColor="@color/text_color_grey"
+                                android:textSize="@dimen/_15sdp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.jio.jioinfra.custom.TextViewLight
+                                android:id="@+id/txt_total_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_marginRight="@dimen/scale_16dp"
+                                android:paddingBottom="@dimen/scale_10dp"
+                                android:text="33,3333"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_small"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/txt_title" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/header_divider"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/scale_10dp"
+                            android:layout_marginBottom="@dimen/scale_10dp"
+                            android:background="@color/light_grey"
+                            app:layout_constraintEnd_toStartOf="@+id/pb_layout"
+                            app:layout_constraintStart_toEndOf="@+id/total_count_cnsrntl" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/pb_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/scale_10dp"
+                            android:paddingTop="@dimen/scale_10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toEndOf="@id/header_divider"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/pb1_cnstrntL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toTopOf="@+id/pb2_cnstrntL"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ProgressBar
+                                    android:id="@+id/pb_1"
+                                    style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginTop="@dimen/scale_10dp"
+                                    android:layout_marginRight="@dimen/scale_25dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/progress_drawable_blue"
+                                    app:layout_constraintBottom_toTopOf="@+id/pb1_title"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <com.jio.jioinfra.custom.TextViewMedium
+                                    android:id="@+id/pb1_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:paddingTop="@dimen/scale_12dp"
+                                    android:text=""
+                                    android:textColor="@color/dcb_grey_txt_color"
+                                    android:textSize="@dimen/text_size_so_small"
+                                    android:visibility="visible"
+                                    app:layout_constraintEnd_toStartOf="@+id/pb1_count"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/pb_1"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.jio.jioinfra.custom.TextViewMedium
+                                    android:id="@+id/pb1_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/scale_10dp"
+                                    android:gravity="left"
+                                    android:paddingTop="@dimen/scale_12dp"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size_so_small"
+                                    android:visibility="visible"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/pb1_title"
+                                    app:layout_constraintTop_toBottomOf="@+id/pb_1"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/pb2_cnstrntL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/scale_5dp"
+                                app:layout_constraintTop_toBottomOf="@+id/pb1_cnstrntL">
+
+                                <ProgressBar
+                                    android:id="@+id/pb_2"
+                                    style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginTop="@dimen/scale_10dp"
+                                    android:layout_marginRight="@dimen/scale_25dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/progress_drawable_blue"
+                                    app:layout_constraintBottom_toTopOf="@+id/pb2_title"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <com.jio.jioinfra.custom.TextViewMedium
+                                    android:id="@+id/pb2_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:paddingTop="@dimen/scale_12dp"
+                                    android:text=""
+                                    android:textColor="@color/dcb_grey_txt_color"
+                                    android:textSize="@dimen/text_size_so_small"
+                                    android:visibility="visible"
+                                    app:layout_constraintEnd_toStartOf="@+id/pb2_count"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/pb_2"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.jio.jioinfra.custom.TextViewMedium
+                                    android:id="@+id/pb2_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/scale_10dp"
+                                    android:gravity="left"
+                                    android:paddingTop="@dimen/scale_12dp"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size_so_small"
+                                    android:visibility="visible"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/pb2_title"
+                                    app:layout_constraintTop_toBottomOf="@+id/pb_2"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/pb3_cnstrntL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/scale_5dp"
+                                app:layout_constraintTop_toBottomOf="@+id/pb2_cnstrntL">
+
+                                <ProgressBar
+                                    android:id="@+id/pb_3"
+                                    style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_marginTop="@dimen/scale_10dp"
+                                    android:layout_marginRight="@dimen/scale_25dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/progress_drawable_blue"
+                                    app:layout_constraintBottom_toTopOf="@+id/pb3_title"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <com.jio.jioinfra.custom.TextViewMedium
+                                    android:id="@+id/pb3_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left"
+                                    android:paddingTop="@dimen/scale_12dp"
+                                    android:text=""
+
+                                    android:textColor="@color/dcb_grey_txt_color"
+                                    android:textSize="@dimen/text_size_so_small"
+                                    android:visibility="visible"
+                                    app:layout_constraintEnd_toStartOf="@+id/pb3_count"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/pb_3"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.jio.jioinfra.custom.TextViewMedium
+                                    android:id="@+id/pb3_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/scale_10dp"
+                                    android:gravity="left"
+                                    android:paddingTop="@dimen/scale_12dp"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size_so_small"
+                                    android:visibility="visible"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/pb3_title"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/viewId11"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scale_1dp"
+                android:background="@color/txt_grey_color"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewId">
+            </View>
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_reading_missing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Radiating Site Missing in"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_missing_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+
+
+
+                app:layout_constraintTop_toBottomOf="@+id/constrainL" />
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="@dimen/_5sdp"-->
+<!--                >-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardView1"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="@dimen/_5sdp"-->
+<!--                    android:elevation="12dp"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    app:cardUseCompatPadding="true"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/cardView2"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    tools:ignore="MissingConstraints">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:id="@+id/zabbix_cnsrntl"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+
+
+<!--                        android:paddingLeft="@dimen/_5sdp"-->
+<!--                        app:layout_constraintHorizontal_chainStyle="spread_inside"-->
+<!--                        app:layout_constraintHorizontal_weight="1"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent">-->
+
+
+<!--                        <com.jio.jioinfra.custom.TextViewLight-->
+<!--                            android:id="@+id/txt_title1"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/lmargin_15"-->
+<!--                            android:gravity="center"-->
+<!--                            android:paddingTop="@dimen/scale_10dp"-->
+<!--                            android:text="Zabbix"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/_14sdp"-->
+<!--                            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                            app:layout_constraintRight_toRightOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                        <com.jio.jioinfra.custom.TextViewLight-->
+<!--                            android:id="@+id/txt_count1"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/_15sdp"-->
+
+<!--                            android:paddingBottom="@dimen/scale_10dp"-->
+<!--                            android:text="33,3333"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/text_size_small"-->
+<!--                            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                            app:layout_constraintRight_toRightOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@id/txt_title1" />-->
+
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardView2"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:elevation="12dp"-->
+<!--                    app:cardCornerRadius="8dp"-->
+
+
+<!--                    app:cardUseCompatPadding="true"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/cardView3"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/cardView1"-->
+
+<!--                    tools:ignore="MissingConstraints">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:id="@+id/timip_cnsrntl"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+
+<!--                        app:layout_constraintHorizontal_chainStyle="spread_inside"-->
+
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent">-->
+
+
+<!--                        <com.jio.jioinfra.custom.TextViewLight-->
+<!--                            android:id="@+id/txt_title2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/lmargin_15"-->
+<!--                            android:gravity="center"-->
+<!--                            android:paddingTop="@dimen/scale_10dp"-->
+<!--                            android:text="TeMIP"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/_14sdp"-->
+<!--                            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                            app:layout_constraintRight_toRightOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                        <com.jio.jioinfra.custom.TextViewLight-->
+<!--                            android:id="@+id/txt_count2"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/_15sdp"-->
+<!--                            android:paddingBottom="@dimen/scale_10dp"-->
+<!--                            android:text="33,3333"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/text_size_small"-->
+<!--                            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                            app:layout_constraintRight_toRightOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@id/txt_title2" />-->
+
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/cardView3"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="@dimen/_5sdp"-->
+<!--                    android:elevation="12dp"-->
+<!--                    app:cardCornerRadius="8dp"-->
+<!--                    app:cardUseCompatPadding="true"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/cardView2"-->
+<!--                    tools:ignore="MissingConstraints">-->
+
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:id="@+id/granite_cnsrntl"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        app:layout_constraintHorizontal_chainStyle="spread_inside"-->
+<!--                        app:layout_constraintHorizontal_weight="1"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent">-->
+
+
+<!--                        <com.jio.jioinfra.custom.TextViewLight-->
+<!--                            android:id="@+id/txt_title3"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/lmargin_15"-->
+<!--                            android:gravity="center"-->
+<!--                            android:paddingTop="@dimen/scale_10dp"-->
+<!--                            android:text="Granite"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/_14sdp"-->
+<!--                            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                            app:layout_constraintRight_toRightOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                        <com.jio.jioinfra.custom.TextViewLight-->
+<!--                            android:id="@+id/txt_count3"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="@dimen/_15sdp"-->
+<!--                            android:paddingBottom="@dimen/scale_10dp"-->
+<!--                            android:text="33,3333"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="@dimen/text_size_small"-->
+<!--                            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                            app:layout_constraintRight_toRightOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@id/txt_title3" />-->
+
+
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_bad_site"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="Bad Sites-Faulty Controller - Zabbix"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewBadSite1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:elevation="12dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toStartOf="@+id/cardViewDg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/smpps_cnsrntl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <com.jio.jioinfra.custom.TextViewLight
+                            android:id="@+id/txt_title_smmps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/scale_10dp"
+                            android:text="SMPS Controller Faulty"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.jio.jioinfra.custom.TextViewLight
+                            android:id="@+id/txt_smpps_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+
+                            android:paddingBottom="@dimen/scale_10dp"
+                            android:text="33,3333"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt_title_smmps" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewDg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:elevation="12dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cardViewBadSite1"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/dg_cnsrntl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <com.jio.jioinfra.custom.TextViewLight
+                            android:id="@+id/txt_title_dg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/scale_10dp"
+                            android:text="DG Controller \n Faulty"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.jio.jioinfra.custom.TextViewLight
+                            android:id="@+id/txt_dg_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:paddingBottom="@dimen/scale_10dp"
+                            android:text="33,3333"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_small"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt_title_dg" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_bad_site2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="Bad Sites- Partial Telemetry Reporting-"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:elevation="12dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="10sp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toStartOf="@+id/cardView2"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_badsites_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_rounded_corner_bg"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/constrainL" />
+            </androidx.cardview.widget.CardView>
+            <com.jio.jioinfra.custom.TextViewMedium
+                android:id="@+id/txt_gapes_site"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="Gaps in Granite Data for Radiating Sites"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:elevation="12dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="10sp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toStartOf="@+id/cardView2"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_gapessites_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_rounded_corner_bg"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/constrainL" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cnstrntL_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_8sdp"
+                android:visibility="visible">
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_region_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Region"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnsrntL_spnr_region"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/spener_item"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_region_title">
+
+                    <Spinner
+                        android:id="@+id/spnr_region"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@android:color/transparent"
+                        android:dropDownVerticalOffset="30dp"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_1sdp"
+                        android:layout_marginLeft="1sp"
+                        android:background="@drawable/spener_item_drop"
+                        android:src="@drawable/down_arrow_icon"
+                        android:tint="@color/white"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_state_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="State"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cnsrntL_spnr_region" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnsrntL_spnr_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/spener_item"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_state_title">
+
+                    <Spinner
+                        android:id="@+id/spnr_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@android:color/transparent"
+                        android:dropDownVerticalOffset="30dp"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_1sdp"
+                        android:layout_marginLeft="1sp"
+                        android:background="@drawable/spener_item_drop"
+                        android:src="@drawable/down_arrow_icon"
+                        android:tint="@color/white"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_mp_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="MP"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cnsrntL_spnr_state" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstntL_spnr_mp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/spener_item"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_mp_title">
+
+                    <Spinner
+                        android:id="@+id/spnr_mp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@android:color/transparent"
+                        android:dropDownVerticalOffset="30dp"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_1sdp"
+                        android:layout_marginLeft="1sp"
+                        android:background="@drawable/spener_item_drop"
+                        android:src="@drawable/down_arrow_icon"
+                        android:tint="@color/white"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_jc_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="JC"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cnstntL_spnr_mp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cnstrntL_spnr_jc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/spener_item"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_jc_title">
+
+                    <Spinner
+                        android:id="@+id/spnr_jc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@android:color/transparent"
+                        android:dropDownVerticalOffset="30dp"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_1sdp"
+                        android:layout_marginLeft="1sp"
+                        android:background="@drawable/spener_item_drop"
+                        android:src="@drawable/down_arrow_icon"
+                        android:tint="@color/white"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/txt_apply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/apply_rounded"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Apply"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>
+

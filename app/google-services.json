@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "201205565139",
+    "firebase_url": "https://siopsngo.firebaseio.com",
+    "project_id": "siopsngo",
+    "storage_bucket": "siopsngo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201205565139:android:b98fab97b9254d44657626",
+        "android_client_info": {
+          "package_name": "com.jio.siops_ngo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201205565139-jpaaetqe9m5vqi4bdfg5plo8kqui89sm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqD73-L56xkQhS2hZmMPFw7yfCJmztLS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201205565139-jpaaetqe9m5vqi4bdfg5plo8kqui89sm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

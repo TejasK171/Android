@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+   >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".newDesign.NgoLoginFragment">
+
+    <LinearLayout
+        android:id="@+id/headerId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imgeLgoItd"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_login_jio_siops"
+            tools:ignore="MissingConstraints">
+
+        </ImageView>
+    </LinearLayout>
+
+
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/headerIdtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:text="Smart Integrated Operations"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/_16sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerId"
+        tools:ignore="MissingConstraints">
+
+
+    </com.jio.jioinfra.custom.TextViewLight>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constEditLoginLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/_25sdp"
+        app:layout_constraintTop_toBottomOf="@+id/headerIdtext"
+        >
+
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_userNameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textColor="@color/jioinfra_gray"
+        tools:ignore="MissingConstraints">
+
+    </com.jio.jioinfra.custom.TextViewLight>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_userNameId"
+            android:layout_width="@dimen/_205sdp"
+            android:layout_height="wrap_content"
+            android:hint="User Name"
+            android:textSize="@dimen/_12sdp"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/txt_userNameId"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            ></androidx.appcompat.widget.AppCompatEditText>
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/txt_rilHintId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@ril.com"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingLeft="@dimen/_4sdp"
+            android:paddingRight="@dimen/_4sdp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toRightOf="parent"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintTop_toBottomOf="@+id/txt_userNameId"
+
+
+            tools:ignore="MissingConstraints">
+
+        </com.jio.jioinfra.custom.TextViewLight>
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/txt_passId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            app:layout_constraintTop_toBottomOf="@+id/edit_userNameId"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="@color/jioinfra_gray"
+
+            tools:ignore="MissingConstraints">
+
+
+        </com.jio.jioinfra.custom.TextViewLight>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_passId"
+            android:layout_width="@dimen/_205sdp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="@dimen/_12sdp"
+            android:padding="@dimen/_10sdp"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/txt_passId"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            ></androidx.appcompat.widget.AppCompatEditText>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.jio.jioinfra.custom.ButtonViewLight
+        android:id="@+id/btn_generateId"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/constEditLoginLL"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/jioinfra_gray"
+        android:gravity="center"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:paddingRight="@dimen/_25sdp"
+        android:paddingLeft="@dimen/_25sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:background="@drawable/new_login_generate"
+        android:text="Generate OTP"
+        ></com.jio.jioinfra.custom.ButtonViewLight>
+
+
+
+<com.jio.jioinfra.custom.TextViewLight
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/jioinfra_gray"
+        android:text="Version 1.0"
+        app:layout_constraintBottom_toTopOf="@+id/constLL">
+
+
+    </com.jio.jioinfra.custom.TextViewLight>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:background="@color/colorAccent"
+    android:padding="@dimen/_12sdp">
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Powered By NextGenOps" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</layout>

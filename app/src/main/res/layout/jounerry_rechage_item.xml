@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="7"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnr_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="7"
+        android:visibility="visible"
+        android:padding="@dimen/_5sdp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/header1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+
+            android:textSize="@dimen/_6sdp"
+            android:text="aa"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/_8sdp"
+            android:text="aa"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:textSize="@dimen/_8sdp"
+            android:text="aa"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/_8sdp"
+            android:text="aa"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/_8sdp"
+            android:gravity="center"
+            android:text="aa"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/_8sdp"
+            android:gravity="center"
+            android:text="aa"/>
+        <View
+            android:layout_width="@dimen/scale_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/jioinfra_gray"
+            />
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/header7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/_8sdp"
+            android:gravity="center"
+            android:text="aa"/>
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/jioinfra_gray"
+        />
+
+</LinearLayout>

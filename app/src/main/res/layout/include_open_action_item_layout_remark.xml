@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardUseCompatPadding="true"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardUseCompatPadding="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <!--Site and Last Update Layout-->
+        <LinearLayout
+            android:id="@+id/layoutSiteLastUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:text="Site"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Last Update"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/divider"
+            layout="@layout/include_horizontal_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutSiteLastUpdate" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <!--Site and Last Update Layout-->
+            <LinearLayout
+                android:id="@+id/layoutSiteLastUpdateValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:text="I-MH-MUMB-ENB-5065"
+                    android:textColor="#294890"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.jio.jioinfra.custom.TextViewLight
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:id="@+id/layoutItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:id="@+id/textViewActionName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="@string/date"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/textViewActionCount11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="@string/remarks"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textColor="#000000" />
+
+                <com.jio.jioinfra.custom.TextViewMedium
+                    android:id="@+id/textViewActionCount1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight=".5"
+                    android:gravity="center_horizontal"
+                    android:text="@string/updated_by"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewOpenAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+
+            <EditText
+                android:padding="2dp"
+                android:textSize="12sp"
+                android:gravity="top|start"
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/shape_rectangle_grey_border" />
+
+            <TextView
+                android:textSize="10sp"
+                android:id="@+id/textViewNumCharEntered"
+                android:text="0/100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:textSize="10sp"
+                    android:id="@+id/checkBoxSubmitClosure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Submit Closure"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <Button
+                    android:id="@+id/buttonAddRemarks"
+                    style="@style/buttonStyleBlue"
+                    android:layout_width="80dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Add Remarks"
+                    android:textAllCaps="false"
+                    android:textSize="8dp"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintLeft_toRightOf="@id/checkBoxSubmitClosure"
+                    app:layout_constraintRight_toLeftOf="@id/textViewHideDetails"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <com.jio.jioinfra.custom.TextViewLight
+                    android:id="@+id/textViewHideDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:text="Hide Details"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

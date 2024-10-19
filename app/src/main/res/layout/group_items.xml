@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.jio.jioinfra.custom.TextViewMedium
+        android:id="@+id/txt_risk_analysis_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Group"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/scale_10dp"
+        android:textSize="@dimen/text_size_small"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent" />
+    <com.jio.jioinfra.custom.TextViewLight
+        android:id="@+id/txt_source_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Desktop"
+        android:textSize="@dimen/_12sdp"
+        android:paddingTop="@dimen/text_size_so_small"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/txt_risk_analysis_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

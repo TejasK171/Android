@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/lnr_oa_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        >
+
+        <com.jio.jioinfra.custom.TextViewLight
+            android:id="@+id/txt_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:text="Region"
+            android:gravity="left"
+            android:padding="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/dark_blue_color" />
+
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Site Count"
+            android:gravity="left"
+            android:textSize="@dimen/_12sdp"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:textColor="@color/txt_grey_color" />
+
+        <View
+            android:id="@+id/viewIda"
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_below="@+id/txt_count"
+            android:background="@color/txt_grey_color"
+            >
+        </View>
+
+
+    </RelativeLayout>
+</LinearLayout>

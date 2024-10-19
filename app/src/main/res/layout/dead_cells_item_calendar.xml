@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/cnstrntL_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_last7days"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_rounded_left_corner_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="Last 7 days"
+            android:textColor="@color/white" />
+
+        <com.jio.jioinfra.custom.TextViewMedium
+            android:id="@+id/txt_last30days"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_rounded_right_corner_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="Last 30 days"
+            android:textColor="@color/blue_text" />
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cnstrntL_last7days_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/cnstrntL_tabs">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cnstrntL_7days_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_date_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:text="Date"
+                android:textColor="@color/txt_grey_color"
+                android:textSize="@dimen/text_size_11sp"
+                app:layout_constraintEnd_toStartOf="@+id/txt_impc_customers_title"
+                app:layout_constraintHorizontal_weight="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_impc_customers_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_4sdp"
+                android:text="Impacted Customers"
+                android:textColor="@color/txt_grey_color"
+                android:textSize="@dimen/text_size_11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txt_stats_of_cells_title"
+                app:layout_constraintHorizontal_weight="1.3"
+                app:layout_constraintStart_toEndOf="@id/txt_date_title"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.jio.jioinfra.custom.TextViewLight
+                android:id="@+id/txt_stats_of_cells_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_4sdp"
+                android:text="Stats Of cells"
+                android:textColor="@color/txt_grey_color"
+                android:textSize="@dimen/text_size_11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="0.9"
+                app:layout_constraintStart_toEndOf="@id/txt_impc_customers_title"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/cnstrntL_7days_header" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.jio.siops_ngo.eventcalenderlibrary.CalenderEvent
+        android:id="@+id/calender_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:current_month_day_color="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@+id/cnstrntL_tabs"
+        app:month_color="@color/colorPrimaryDark"
+        app:off_month_day_color="@color/colorPrimaryDark"
+        app:week_name_color="@color/colorPrimaryDark" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

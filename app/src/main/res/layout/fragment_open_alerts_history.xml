@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:id="@+id/scroll"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+    <RelativeLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:background="@color/body_bg"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/history_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_above="@+id/progressBar"
+            />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent" />
+
+
+    </RelativeLayout>
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+    <data>
+
+        <import type="android.view.View" />
+
+    </data>
+</layout>
